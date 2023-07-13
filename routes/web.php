@@ -30,23 +30,8 @@ Route::middleware('auth')->group(function () {
 });
 Route::get('/dashboard', function () {
     return view('dashboard');
-//    Route::get('/', 'PostController@index')->name('posts.index');
 
 })->middleware(['auth', 'verified'])->name('dashboard');
-//// Защищенные маршруты для аутентифицированных пользователей
-//Route::group(['middleware' => 'auth'], function () {
-//    // Список постов
-//    Route::get('/posts', 'PostController@index')->name('posts.index');
-//    // Форма создания поста
-//    Route::get('/posts/create', 'PostController@create')->name('posts.create');
-//    // Сохранение нового поста
-//    Route::post('/posts', 'PostController@store')->name('posts.store');
-//    // Форма редактирования поста
-//    Route::get('/posts/{post}/edit', 'PostController@edit')->name('posts.edit');
-//    // Обновление поста
-//    Route::put('/posts/{post}', 'PostController@update')->name('posts.update');
-//    // Удаление поста
-//    Route::delete('/posts/{post}', 'PostController@destroy')->name('posts.destroy');
-//});
+
 
 require __DIR__.'/auth.php';
